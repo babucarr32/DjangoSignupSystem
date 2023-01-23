@@ -1,12 +1,7 @@
-body{
-    /* background-color: rgb(67, 66, 66); */
-
-}
 .background{
     color: rgb(255, 255, 255);
     background-color: rgb(55, 55, 55);
     height: auto;
-    /* text-align: center; */
     position: absolute;
     left: 50%;
     top: 50%;
@@ -15,7 +10,6 @@ body{
     padding: 20px;
     border-radius: 3vw;
     box-shadow: 0 0 8px 1px rgb(55, 55, 55);
-    /* font-size: xx-large; */
 }
 input{
     width: 25vw;
