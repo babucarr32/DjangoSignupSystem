@@ -13,18 +13,26 @@
     <div class="background">
         <h1>Signup</h1>
         <br><br>
-        <form action="">
-            <div>
-                <input type="text" placeholder="username" name="username">
-                <br>
-                <input type="text" placeholder="password" name="password">
-                <br>
-                <input type="text" placeholder="re-password" name="password2">
-                <br>
-                <div class="aTag">
-                    <a href="">Submit</a>
+        {% if UserExists %}
+            <p style="color: brown;">{{ UserExists }}</p>
+        {% endif %}
+        {% if passwordUnmatched %}
+                <p style="color: brown;">{{ passwordUnmatched }}</p> 
+        {% endif %}
+        <form action="{% url 'signup' %}" method="POST">
+            {% csrf_token %}
+                <div>
+                    <input type="text" placeholder="username" name="username" required>
+                    <br>
+                    <input placeholder="password" name="password" type="password" required>
+                    <br>
+                    <input placeholder="re-password" name="password2" type="password" required>
+                    <br>
+                    <div class="aTag">
+                        <button>Submit</button>
+                    </div>
                 </div>
-            </div>
+            
         </form>
     </div>
 </body>
